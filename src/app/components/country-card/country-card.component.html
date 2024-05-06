@@ -1,0 +1,30 @@
+<!-- Individual Country Card Component -->
+<div class="country-card">
+  <div class="">
+    <!-- Conditionally render the card only if a country is available -->
+    <div *ngIf="country" class="card" [routerLink]="'/' + country.name.common">
+      <!-- Country flag image within the card -->
+      <div class="card-image">
+        <img
+          [src]="country.flags.png"
+          class="card-img-top"
+          alt="country.flags.alt"
+        />
+      </div>
+      <!-- Body of the card containing country information -->
+      <div class="card-body">
+        <div class="card-content">
+          <h5 class="card-title fw-bold-800">{{ country.name.common }}</h5>
+          <p class="card-text">
+            <strong>Population: </strong>
+            {{ country.population | number : "1.0" }}
+          </p>
+          <p class="card-text"><b>Region: </b> {{ country.region }}</p>
+          <p class="card-text">
+            <strong>Capital: </strong> {{ country.capital }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

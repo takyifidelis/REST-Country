@@ -1,0 +1,50 @@
+<!-- SEARCH FILTER AND THE REGION FILTER HTML -->
+
+<div class="main-container">
+  <div class="circle">
+    <div class="first">
+      <div class="search-filter-div form-control">
+        <span class="fa fa-search"></span>
+        <input
+          class="search-filter"
+          type="text"
+          placeholder="Search for a country..."
+          aria-label="default input example"
+          id="countrySearch"
+          name="countrySearch"
+          [(ngModel)]="searchFilter"
+        />
+      </div>
+    </div>
+    <div class="second">
+      <div class="region-filter">
+        <app-region-filter
+          [options]="regionOptions"
+          [(value)]="regionFilter"
+        ></app-region-filter>
+      </div>
+    </div>
+  </div>
+
+  <!-- COUNTRY CARD INSERTIONS -->
+
+  <div class="container-xxl country-card">
+    <div class="row">
+      <div class="">
+        <h2 class="display-loading" *ngIf="!countries">Loading...</h2>
+        <h2
+          class="display-no-results"
+          *ngIf="countries && countries.length === 0"
+        >
+          No result found
+        </h2>
+        <app-country-card
+          *ngFor="let country of countries"
+          [country]="country"
+          class="col-12 col-md-6 col-lg-3 grid-responsive"
+        >
+        </app-country-card>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+:host-context(.light) .region-filter {
+  background-color: var(--l-element);
+  color: var(--l-text);
+}
+
+:host-context(.dark) .region-filter {
+  background-color: var(--d-element);
+  color: var(--d-text);
+}
+.region-filter {
+  border: none;
+  outline: none;
+  font-family: Nunito Sans;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+.form-control {
+  height: 56px;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+@media (max-width: 600px) {
+  .region-filter {
+    max-width: 70%;
+  }
+}

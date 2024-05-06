@@ -1,0 +1,154 @@
+.main-container {
+  margin: 0 5rem;
+  overflow: hidden;
+}
+.form-control {
+  height: 56px;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.fa-search {
+  margin: 12px;
+}
+
+.country-card {
+  display: grid;
+  row-gap: 2.5rem;
+  column-gap: 1rem;
+}
+.circle {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 0 4rem; */
+  margin: 48px 2.5rem;
+}
+.first {
+  width: 75%;
+}
+.second {
+  width: 18%;
+}
+.no-result {
+  visibility: hidden;
+  font-size: 2rem;
+  font-family: "Nunito Sans", sans-serif;
+  /* line-height: 3rem; */
+  text-align: center;
+}
+
+/* EDIT THE BELOW STYLES */
+
+.grid-responsive {
+  padding: 0;
+}
+
+/* ENDS HERE
+ */
+:host-context(.light) .search-filter {
+  background-color: var(--l-element);
+  color: var(--l-input);
+}
+:host-context(.dark) .search-filter {
+  background-color: var(--d-element);
+  color: var(--d-input);
+}
+:host-context(.light) .search-filter input::placeholder {
+  color: var(--l-text);
+}
+
+:host-context(.dark) .search-filter {
+  background-color: var(--d-element);
+  color: var(--d-input);
+}
+
+:host-context(.light) .search-filter input::placeholder {
+  color: var(--d-text);
+}
+:host-context(.dark) .search-filter-div {
+  background-color: var(--d-element);
+  color: var(--d-input);
+}
+:host-context(.light) .search-filter-div {
+  background-color: var(--l-element);
+  color: var(--l-input);
+}
+.display-loading {
+  text-align: center;
+}
+.display-no-results {
+  text-align: center;
+}
+:host-context(.light) .display-loading {
+  color: var(--l-text);
+}
+:host-context(.dark) .display-loading {
+  color: var(--d-text);
+}
+:host-context(.light) .display-no-results {
+  color: var(--l-text);
+}
+:host-context(.dark) .display-no-results {
+  color: var(--d-text);
+}
+
+.search-filter-div {
+  display: flex;
+  /* padding-left: 1.5rem; */
+  border: none;
+  align-items: center;
+  margin: 0;
+  /* padding: 2rem; */
+  justify-content: space-between;
+  float: left;
+  width: 45%;
+}
+.search-filter {
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.region-filter {
+  display: contents;
+  width: fit-content;
+  float: right;
+}
+.filter-container {
+  /* margin: 3rem 6rem; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type="text"] {
+  border: none;
+  outline: none;
+  padding-left: 1.5rem;
+  width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .circle {
+    display: block;
+    /* padding: 0 4rem; */
+    /* margin-top: 3rem; */
+    margin: 3rem 0rem;
+  }
+  .search-filter-div {
+    width: 120%;
+    margin-bottom: 3rem;
+  }
+  .second {
+    width: 70%;
+  }
+  .main-container {
+    margin: 0 3rem;
+  }
+  .search-filter-div {
+    width: 100vw;
+  }
+}
